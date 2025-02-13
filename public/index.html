@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Card!</title>
+</head>
+<body>
+<h1>Valentine's Card!</h1>
+<canvas id="myCanvas" width="950" height="600" style="border:2px solid #75335e;"></canvas>
+
+<script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "#fadff0";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = "50px Arial";
+    ctx.fillStyle = "#75335e";
+
+    var gradient = ctx.createLinearGradient(0, 0, 280, 0);
+    gradient.addColorStop(0, "#ff7bcf");
+    gradient.addColorStop(1, "#fac8e9");
+
+
+    ctx.fillStyle = gradient;
+    ctx.fillRect(5, 25, 600, 150);
+
+
+    ctx.fillStyle = "#75335e";
+    ctx.fillText("We are a perfect fit!", 10, 80);
+    ctx.fillText("Happy Valentine's Day <3", 10, 150);
+
+
+    //left puzzle piece
+    ctx.beginPath();
+    ctx.rect(175, 275, 200, 200);
+    ctx.fillStyle = "lightpink";
+    ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.arc(275, 275, 50, Math.PI, 0);
+    ctx.fillStyle = "lightpink";
+    ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.arc(175, 375, 50, 3 * Math.PI / 2, Math.PI / 2);
+    ctx.fillStyle = "#fadff0";
+    ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.arc(375, 375, 50, 3 * Math.PI / 2, Math.PI / 2);
+    ctx.fillStyle = "lightpink";
+    ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.arc(275, 475, 50, Math.PI, 2 * Math.PI);
+    ctx.fillStyle = "#fadff0";
+    ctx.fill();
+
+
+
+
+
+    // right puzzle piece
+    ctx.beginPath();
+    ctx.rect(475, 275, 200, 200);
+    ctx.fillStyle = "lightpink";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(575, 275, 50, Math.PI, 0);
+    ctx.fillStyle = "lightpink";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(475, 375, 50, 3 * Math.PI / 2, Math.PI / 2);
+    ctx.fillStyle = "#fadff0";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(675, 375, 50, 3 * Math.PI / 2, Math.PI / 2);
+    ctx.fillStyle = "lightpink";
+    ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.arc(575, 475, 50, Math.PI, 2 * Math.PI);
+    ctx.fillStyle = "#fadff0";
+    ctx.fill();
+
+
+    //heart
+    ctx.beginPath();
+    ctx.arc(800, 450, 45, Math.PI, 0);
+    ctx.fillStyle = "lightpink";
+    ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.arc(890, 450, 45, Math.PI, 0);
+    ctx.fillStyle = "lightpink";
+    ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.moveTo(845, 580);
+    ctx.lineTo(755, 450);
+    ctx.lineTo(935, 450);
+    ctx.closePath();
+    ctx.fillStyle = "lightpink";
+    ctx.fill();
+
+</script>
+</body>
+</html>
